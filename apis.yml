@@ -1,17 +1,51 @@
 aid: halo-precision-diagnostics
 name: HALO Precision Diagnostics
-description: 'HALO Precision Diagnostics is a company surfaced via the API Evangelist harvest backlog
-  (source: secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'HALO Precision Diagnostics (HALO Dx) is a Menlo Park, California precision-diagnostics
+  company that acquires community imaging centers and rebuilds them as what it calls Imaging
+  Center 2.0 — next-generation diagnostic hubs where advanced imaging, genomics and biomarker
+  testing are all performed under one roof. Its diagnostic ensemble combines whole-body and
+  multiparametric MRI, PSMA-targeted PET (PYLARIFY), digital pathology, polygenic risk scoring,
+  hereditary and proteomic testing, and AI-assisted interpretation, applied first to cancer —
+  the prostate program adds MRI-guided targeted biopsy and MRI-guided TULSA-PRO focal ablation —
+  and expanding into cardiovascular disease and dementia. The company is led by CEO Michael Uhl
+  with co-founder Brian Axe as Chief Product Officer and Dr. John Feller as Chief Medical Officer.
+  Clinical delivery happens in HALO''s own centers; referring physicians reach orders, results
+  and images through a vendor-operated provider portal (RoyalMD) and the eUnity enterprise image
+  viewer, and HALO advertises EMR integration for pushing orders and pulling results as a service
+  its vendors deliver rather than as an interface it publishes. HALO operates no public developer
+  program, publishes no API documentation, ships no SDK, and serves no machine-readable API
+  contract; the only JSON on halodx.com is the marketing site''s stock WordPress core REST API.'
 url: https://raw.githubusercontent.com/api-evangelist/halo-precision-diagnostics/refs/heads/main/apis.yml
+image: https://www.halodx.com/wp-content/uploads/2025/05/HALO-Precision-Diagnostics_Logo.svg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
+x-tier: profile
+x-tier-reason: identity-enriched-no-api-surface
+specificationVersion: '0.23'
 created: '2026-08-22'
 modified: '2026-08-22'
 tags:
 - Company
+- Healthcare
+- Diagnostics
+- Medical Imaging
+- Radiology
+- Cancer
+- Precision Medicine
+- Genomics
+- Early Detection
+- Artificial Intelligence
+tags_raw:
+- Company
+- Health Care
+- Diagnostics
+- Medical Imaging
+- Radiology
+- Cancer
+- Precision Medicine
+- Genomics
+- Early Detection
+- Artificial Intelligence
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +53,74 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/halo-precision-diagnostics-domain-security.yml
 - type: Website
+  url: https://www.halodx.com/
+- type: Blog
+  url: https://www.halodx.com/blog/
+- type: BlogRSS
+  url: https://www.halodx.com/blog/feed/
+- type: Support
+  url: https://www.halodx.com/contact/
+- type: PrivacyPolicy
+  url: https://www.halodx.com/privacy/
+- type: Careers
+  url: https://www.halodx.com/careers/
+- type: Team
+  url: https://www.halodx.com/team/
+- type: Locations
+  url: https://www.halodx.com/locations/
+- type: Partners
+  url: https://www.halodx.com/partner-with-us/
+- type: ProviderResources
+  url: https://www.halodx.com/provider-resources/
+- type: KnowledgeCenter
+  url: https://www.halodx.com/knowledge-center/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/halo-dx
+- type: Facebook
+  url: https://www.facebook.com/HaloDx/
+- type: YouTube
+  url: https://www.youtube.com/channel/UCQudju8UU6L9-Fz27A6bH5Q
+- type: SecondaryMarket
   url: https://www.hiive.com/securities/halo-precision-diagnostics-stock
+- type: LLMsTxt
+  url: llms/halo-precision-diagnostics-llms.txt
+x-enrichment:
+  date: '2026-08-22'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: HALO Precision Diagnostics is a clinical imaging-center operator whose referring-physician
+    integration is delivered by third-party vendor products — a RoyalMD provider portal and the
+    eUnity image viewer — so halodx.com carries no developer, docs or API hostname, api.halodx.com
+    resolves in DNS but answers every path with a bare empty 404, and the only machine-readable
+    JSON on the site is the marketing CMS's stock WordPress core REST API at /wp-json/.
+  evidence:
+  - url: https://www.halodx.com/openapi.json
+    status: 404
+  - url: https://www.halodx.com/llms.txt
+    status: 404
+  - url: https://www.halodx.com/graphql
+    status: 404
+  - url: https://www.halodx.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.halodx.com/.well-known/security.txt
+    status: 404
+  - url: https://www.halodx.com/.well-known/api-catalog
+    status: 404
+  - url: https://api.halodx.com/openapi.json
+    status: 404
+  - url: https://api.halodx.com/graphql
+    status: 404
+  - url: https://www.halodx.com/fhir/metadata
+    status: 404
+  - url: https://www.halodx.com/wp-json/
+    status: 200
+  - url: https://www.halodx.com/provider-resources/
+    status: 200
+  checked: '2026-08-22'
