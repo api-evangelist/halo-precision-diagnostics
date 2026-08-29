@@ -16,6 +16,17 @@ description: 'HALO Precision Diagnostics (HALO Dx) is a Menlo Park, California p
   program, publishes no API documentation, ships no SDK, and serves no machine-readable API
   contract; the only JSON on halodx.com is the marketing site''s stock WordPress core REST API.'
 url: https://raw.githubusercontent.com/api-evangelist/halo-precision-diagnostics/refs/heads/main/apis.yml
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://www.halodx.com/wp-content/uploads/2025/05/HALO-Precision-Diagnostics_Logo.svg
 x-type: company
 x-source: harvest:secondary-market
